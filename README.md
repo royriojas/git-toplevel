@@ -1,3 +1,6 @@
+[![NPM Version](http://img.shields.io/npm/v/git-toplevel.svg?style=flat)](https://npmjs.org/package/git-toplevel)
+[![Build Status](http://img.shields.io/travis/royriojas/git-toplevel.svg?style=flat)](https://travis-ci.org/royriojas/git-toplevel)
+
 # git-toplevel
 > Method to find the top level git directory
 
