@@ -1,0 +1,46 @@
+{
+  "name": "git-toplevel",
+  "version": "0.0.9",
+  "description": "Yet another changelog generator from git commits, based on conventions and with an optional hook to enforce the rules",
+  "main": "index.js",
+  "scripts": {
+    "beautify": "esbeautifier index.js 'specs/**/*.js'",
+    "beautify-check": "esbeautifier -k index.js 'specs/**/*.js'",
+    "eslint": "eslint --format 'node_modules/eslint-friendly-formatter' index.js specs/ -c './configs/eslint.json'",
+    "test": "mocha-runner 'specs/**/*.js'",
+    "cover": "istanbul cover -x 'specs/**/*.js' mocha-runner 'specs/**/*.js' html text-summary",
+    "watch": "npm run cover && watch-spawn -p 'specs/**/*.js' -p 'index.js'' npm run cover",
+    "check": "npm run beautify && npm run eslint && npm test",
+    "prepush": "npm run beautify-check && npm run eslint && npm test"
+  },
+  "keywords": [
+    "git-toplevel",
+    "git root directory",
+    "git"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/royriojas/git-toplevel"
+  },
+  "license": "MIT",
+  "author": "Roy Riojas (http://royriojas.com)",
+  "prepush": [
+    "npm run prepush"
+  ],
+  "dependencies": {
+    "clix": "^1.0.5",
+    "es6-promise": "^2.0.1",
+    "lodash.trim": "^3.0.1"
+  },
+  "devDependencies": {
+    "esbeautifier": "^2.0.1",
+    "eslint": "^0.17.0",
+    "eslint-friendly-formatter": "^1.0.3",
+    "istanbul": "^0.3.8",
+    "mocha-runner": "^1.0.5",
+    "prepush": "^1.0.3",
+    "proxyquire": "^1.4.0",
+    "read-file": "^0.1.2",
+    "watch-spawn": "^1.0.3"
+  }
+}
