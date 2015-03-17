@@ -4,12 +4,12 @@
 # git-toplevel
 > Method to find the top level git directory
 
-# Install
+## Install
 ```bash
 npm i --save git-toplevel
 ```
 
-# Usage
+## Usage
 ```javascript
 var gitTopLevel = require('git-toplevel');
 
