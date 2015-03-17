@@ -19,3 +19,5 @@ gitTopLevel().then(function(dir) {
   // err ===> any error that happen when trying to get the top level dir
 });
 ```
+
+## [Changelog](./changelog.md)
