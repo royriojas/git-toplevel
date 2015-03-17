@@ -42,5 +42,12 @@
     "proxyquire": "^1.4.0",
     "read-file": "^0.1.2",
     "watch-spawn": "^1.0.3"
+  },
+  "changelogx": {
+    "issueIDRegExp" : "#(\\d+)",
+    "commitURL": "https://github.com/royriojas/git-toplevel/commit/{0}",
+    "authorURL": "https://github.com/{0}",
+    "issueIDURL": "https://github.com/royriojas/git-toplevel/issues/{0}",
+    "projectName": "changelogx"
   }
 }
