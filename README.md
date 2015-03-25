@@ -20,4 +20,8 @@ gitTopLevel().then(function(dir) {
 });
 ```
 
+## Lincense
+
+MIT
+
 ## [Changelog](./changelog.md)

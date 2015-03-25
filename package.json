@@ -1,17 +1,19 @@
 {
   "name": "git-toplevel",
   "version": "1.0.2",
-  "description": "Yet another changelog generator from git commits, based on conventions and with an optional hook to enforce the rules",
+  "description": "Method to find the top level git directory",
   "main": "index.js",
   "scripts": {
     "beautify": "esbeautifier index.js 'specs/**/*.js'",
     "beautify-check": "esbeautifier -k index.js 'specs/**/*.js'",
-    "eslint": "eslint --format 'node_modules/eslint-friendly-formatter' index.js specs/ -c './configs/eslint.json'",
+    "eslint": "eslinter index.js 'specs/**/*.js'",
     "test": "mocha-runner 'specs/**/*.js'",
     "cover": "istanbul cover -x 'specs/**/*.js' mocha-runner 'specs/**/*.js' html text-summary",
     "watch": "npm run cover && watch-spawn -p 'specs/**/*.js' -p 'index.js'' npm run cover",
-    "check": "npm run beautify && npm run eslint && npm test",
-    "prepush": "npm run beautify-check && npm run eslint && npm test"
+    "lint": "npm run beautify && npm run eslint && npm test",
+    "check": "npm run beautify-check && npm run eslint && npm test",
+    "install-hooks": "changelogx install-hook && prepush install",
+    "bump": "bumpery --verify='npm run check'"
   },
   "keywords": [
     "git-toplevel",
@@ -33,18 +35,19 @@
     "lodash.trim": "^3.0.1"
   },
   "devDependencies": {
-    "esbeautifier": "^2.0.1",
-    "eslint": "^0.17.0",
-    "eslint-friendly-formatter": "^1.0.3",
+    "bumpery": "^1.0.4",
+    "changelogx": "^1.0.11",
+    "esbeautifier": "^2.0.3",
+    "eslinter": "^1.0.0",
     "istanbul": "^0.3.8",
     "mocha-runner": "^1.0.5",
-    "prepush": "^1.0.3",
+    "prepush": "^2.0.3",
     "proxyquire": "^1.4.0",
     "read-file": "^0.1.2",
     "watch-spawn": "^1.0.3"
   },
   "changelogx": {
-    "issueIDRegExp" : "#(\\d+)",
+    "issueIDRegExp": "#(\\d+)",
     "commitURL": "https://github.com/royriojas/git-toplevel/commit/{0}",
     "authorURL": "https://github.com/{0}",
     "issueIDURL": "https://github.com/royriojas/git-toplevel/issues/{0}",
