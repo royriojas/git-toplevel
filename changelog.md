@@ -1,20 +1,22 @@
 
-# changelogx - Changelog
-## HEAD
-#### Changelog
-- **Documentation**
-  - generated changelog - [e655038]( https://github.com/royriojas/git-toplevel/commit/e655038 ), [Roy Riojas](https://github.com/Roy Riojas), 24/03/2015 23:56:18
+# git-toplevel - Changelog
+## v1.1.0
+- **Build Scripts Changes**
+  - update build scripts and dependencies - [a0d9ecc]( https://github.com/royriojas/git-toplevel/commit/a0d9ecc ), [royriojas](https://github.com/royriojas), 25/07/2015 01:48:00
 
     
-- **Build Scripts Changes**
-  - Release v1.0.3 - [32f687a]( https://github.com/royriojas/git-toplevel/commit/32f687a ), [Roy Riojas](https://github.com/Roy Riojas), 24/03/2015 23:55:18
+  - remove unused config file - [c207c5e]( https://github.com/royriojas/git-toplevel/commit/c207c5e ), [royriojas](https://github.com/royriojas), 25/07/2015 01:15:46
+
+    
+- **Refactoring**
+  - Include jq-trim instead of lodash.trim - [d6eb0f2]( https://github.com/royriojas/git-toplevel/commit/d6eb0f2 ), [royriojas](https://github.com/royriojas), 25/07/2015 01:47:21
+
+    
+- **Enhancements**
+  - Remove dependency on `lodash.trim` - [44eb4a3]( https://github.com/royriojas/git-toplevel/commit/44eb4a3 ), [royriojas](https://github.com/royriojas), 25/07/2015 01:16:13
 
     
 ## v1.0.3
-- **Build Scripts Changes**
-  - Release v1.0.3 - [0c26b1c]( https://github.com/royriojas/git-toplevel/commit/0c26b1c ), [Roy Riojas](https://github.com/Roy Riojas), 24/03/2015 23:54:40
-
-    
 - **Documentation**
   - FIxed module package.json description field and added hooks - [65cf0e3]( https://github.com/royriojas/git-toplevel/commit/65cf0e3 ), [Roy Riojas](https://github.com/Roy Riojas), 24/03/2015 23:54:15
 
@@ -23,10 +25,6 @@
 
     
 ## v1.0.2
-- **Build Scripts Changes**
-  - Release v1.0.2 - [8a7f5e7]( https://github.com/royriojas/git-toplevel/commit/8a7f5e7 ), [Roy Riojas](https://github.com/Roy Riojas), 16/03/2015 18:44:07
-
-    
 - **Documentation**
   - Fix documentation - [42d9941]( https://github.com/royriojas/git-toplevel/commit/42d9941 ), [Roy Riojas](https://github.com/Roy Riojas), 16/03/2015 18:43:35
 
@@ -35,19 +33,11 @@
 
     
 ## v1.0.1
-- **Build Scripts Changes**
-  - Release v1.0.1 - [c35e52d]( https://github.com/royriojas/git-toplevel/commit/c35e52d ), [Roy Riojas](https://github.com/Roy Riojas), 16/03/2015 01:41:44
-
-    
 - **Documentation**
   - Add badges - [ea4c3dd]( https://github.com/royriojas/git-toplevel/commit/ea4c3dd ), [Roy Riojas](https://github.com/Roy Riojas), 16/03/2015 01:39:30
 
     
 ## v1.0.0
-- **Build Scripts Changes**
-  - Release v1.0.0 - [dcae11f]( https://github.com/royriojas/git-toplevel/commit/dcae11f ), [Roy Riojas](https://github.com/Roy Riojas), 16/03/2015 01:35:33
-
-    
 - **Features**
   - first working version - [0d6f06f]( https://github.com/royriojas/git-toplevel/commit/0d6f06f ), [Roy Riojas](https://github.com/Roy Riojas), 16/03/2015 01:35:14
 
