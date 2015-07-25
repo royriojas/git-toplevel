@@ -4,17 +4,18 @@
   "description": "Method to find the top level git directory",
   "main": "index.js",
   "scripts": {
-    "beautify": "esbeautifier index.js 'specs/**/*.js'",
-    "beautify-check": "esbeautifier -k index.js 'specs/**/*.js'",
-    "eslint": "eslinter index.js 'specs/**/*.js'",
+    "beautify": "esbeautifier 'index.js' 'specs/**/*.js'",
+    "beautify-check": "esbeautifier -k 'index.js' 'specs/**/*.js'",
+    "eslint": "eslinter 'index.js' 'specs/**/*.js'",
     "test": "mocha-runner 'specs/**/*.js'",
     "cover": "istanbul cover -x 'specs/**/*.js' mocha-runner 'specs/**/*.js' html text-summary",
-    "watch": "npm run cover && watch-spawn -p 'specs/**/*.js' -p 'index.js'' npm run cover",
+    "watch": "watch-spawn -i -p 'specs/**/*.js' -p 'index.js' npm run cover",
     "lint": "npm run beautify && npm run eslint && npm test",
     "check": "npm run beautify-check && npm run eslint && npm test",
     "install-hooks": "changelogx install-hook && prepush install",
     "bump": "bumpery --verify='npm run check'",
-    "changelog" : "changelogx -f markdown -o ./changelog.md"
+    "changelog": "changelogx -f markdown -o ./changelog.md",
+    "do-changelog": "npm run changelog && git add ./changelog.md && git commit -m 'DOC: Generate changelog'"
   },
   "keywords": [
     "git-toplevel",
@@ -32,27 +33,19 @@
   ],
   "dependencies": {
     "clix": "^1.0.5",
-    "es6-promise": "^2.0.1",
-    "lodash.trim": "^3.0.1"
+    "es6-promise": "^2.3.0",
     "jq-trim": "^0.1.0"
   },
   "devDependencies": {
-    "bumpery": "^1.0.4",
-    "changelogx": "^1.0.11",
-    "esbeautifier": "^2.0.3",
-    "eslinter": "^1.0.0",
-    "istanbul": "^0.3.8",
-    "mocha-runner": "^1.0.5",
-    "prepush": "^2.0.3",
-    "proxyquire": "^1.4.0",
-    "read-file": "^0.1.2",
+    "bumpery": "^1.1.1",
+    "changelogx": "^1.0.15",
+    "esbeautifier": "^3.2.0",
+    "eslinter": "^2.0.6",
+    "istanbul": "^0.3.17",
+    "mocha-runner": "^1.0.8",
+    "prepush": "^2.0.4",
+    "proxyquire": "^1.6.0",
+    "read-file": "^0.2.0",
     "watch-spawn": "^1.0.3"
-  },
-  "changelogx": {
-    "issueIDRegExp": "#(\\d+)",
-    "commitURL": "https://github.com/royriojas/git-toplevel/commit/{0}",
-    "authorURL": "https://github.com/{0}",
-    "issueIDURL": "https://github.com/royriojas/git-toplevel/issues/{0}",
-    "projectName": "changelogx"
   }
 }
