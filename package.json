@@ -34,6 +34,7 @@
     "clix": "^1.0.5",
     "es6-promise": "^2.0.1",
     "lodash.trim": "^3.0.1"
+    "jq-trim": "^0.1.0"
   },
   "devDependencies": {
     "bumpery": "^1.0.4",
