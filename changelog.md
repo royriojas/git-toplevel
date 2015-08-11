@@ -1,5 +1,10 @@
 
 # git-toplevel - Changelog
+## v1.1.1
+- **Build Scripts Changes**
+  - remove unused dep - [950317d]( https://github.com/royriojas/git-toplevel/commit/950317d ), [royriojas](https://github.com/royriojas), 11/08/2015 14:17:31
+
+    
 ## v1.1.0
 - **Build Scripts Changes**
   - update build scripts and dependencies - [a0d9ecc]( https://github.com/royriojas/git-toplevel/commit/a0d9ecc ), [royriojas](https://github.com/royriojas), 25/07/2015 01:48:00
